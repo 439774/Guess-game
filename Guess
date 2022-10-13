@@ -1,0 +1,53 @@
+echo "Before we get started the answer's cannot be CAPITAL, no FULL NAMES EITHER!"
+sleep 4
+clear
+echo "Hello we will be playing a guessing game are you ready?"
+read ready
+if [ $ready == yes ]; then 
+    echo "Perfect, lets get started!"
+else 
+    echo "Than GET OUT!"
+    exit 1
+fi
+sleep 3
+clear
+echo "The first hint I will be giving you is glasses!"
+echo "Time for you to guess! :"
+read guess 
+if [ $guess == ahmad ]; then
+    echo "That was close, try again next time!"
+    exit 1 
+elif [ $guess == ali ]; then
+    echo "You got it right great job!"
+else
+    echo "Not even close..."
+    exit 1
+fi
+sleep 2
+clear 
+echo "would you like to play again? :"
+read again 
+
+if [ $again == yes ]; then
+    echo "We shall start than!"
+elif [ $again == no ]; then
+    echo "I knew you couldnt get reach the end!"
+    exit 1
+fi
+sleep 1
+clear
+
+echo "Guess a person here with the first letter A? :"
+read letter
+
+if [ $letter == abdul ]; then
+    echo "Great job you did it again!"
+
+elif [ $letter == ahmad ]; then
+    echo "You almost beat it, but WRONG try again next time!"
+    exit 1
+
+else [ $letter == ali ];
+    echo "Almost but wrong, try again next time!"
+    exit 1
+fi
